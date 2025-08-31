@@ -78,6 +78,10 @@ msgstr "5분"
 msgid "Actions"
 msgstr "작업"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "active"
+msgstr ""
+
 #: src/components/alerts-history-columns.tsx
 #: src/components/routes/settings/alerts-history-data-table.tsx
 msgid "Active"
@@ -498,6 +502,10 @@ msgstr "현재 시스템 구성 내보내기"
 msgid "Fahrenheit (°F)"
 msgstr "화씨 (°F)"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "failed"
+msgstr ""
+
 #: src/lib/api.ts
 msgid "Failed to authenticate"
 msgstr "인증 실패"
@@ -678,6 +686,10 @@ msgstr "공용 인터페이스의 네트워크 트래픽"
 #: src/components/routes/settings/general.tsx
 msgid "Network unit"
 msgstr "네트워크 단위"
+
+#: src/components/SystemdServicesTable.tsx
+msgid "No failed services."
+msgstr ""
 
 #: src/components/command-palette.tsx
 msgid "No results found."
@@ -872,6 +884,14 @@ msgstr "알림을 받는 방법을 구성하려면 <0>알림 설정</0>을 참�
 msgid "Sent"
 msgstr "보냄"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "Service"
+msgstr ""
+
+#: src/components/systems-table/systems-table-columns.tsx
+msgid "Services"
+msgstr ""
+
 #: src/components/routes/settings/general.tsx
 msgid "Set percentage thresholds for meter colors."
 msgstr "그래프 미터 색상의 백분율 임계값을 설정합니다."
@@ -891,6 +911,14 @@ msgstr "설정"
 msgid "Settings saved"
 msgstr "설정이 저장되었습니다."
 
+#: src/components/SystemdServicesTable.tsx
+msgid "Show all"
+msgstr ""
+
+#: src/components/SystemdServicesTable.tsx
+msgid "Show less"
+msgstr ""
+
 #: src/components/login/auth-form.tsx
 msgid "Sign in"
 msgstr "로그인"
@@ -908,6 +936,7 @@ msgstr "정렬 기준"
 msgid "State"
 msgstr "상태"
 
+#: src/components/SystemdServicesTable.tsx
 #: src/components/systems-table/systems-table.tsx
 #: src/lib/alerts.ts
 msgid "Status"
@@ -931,6 +960,11 @@ msgstr "시스템"
 #: src/components/routes/system.tsx
 msgid "System load averages over time"
 msgstr "시간에 따른 시스템 부하 평균"
+
+#: src/components/routes/system.tsx
+#: src/components/SystemdServicesTable.tsx
+msgid "Systemd Services"
+msgstr ""
 
 #: src/components/navbar.tsx
 msgid "Systems"

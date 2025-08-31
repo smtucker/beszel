@@ -141,6 +141,8 @@ export interface SystemStats {
 	g?: Record<string, GPUData>
 	/** battery percent and state */
 	bat?: [number, BatteryState]
+	/** systemd services */
+	ss?: SystemdService[]
 }
 
 export interface GPUData {
@@ -154,6 +156,13 @@ export interface GPUData {
 	u: number
 	/** power (w) */
 	p?: number
+}
+
+export interface SystemdService {
+	/** name */
+	name: string
+	/** status */
+	status: string
 }
 
 export interface ExtraFsStats {

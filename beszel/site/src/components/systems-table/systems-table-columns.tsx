@@ -1,4 +1,4 @@
-import { SystemRecord } from "@/types"
+import { SystemRecord, SystemStats, SystemStatsRecord } from "@/types"
 import { CellContext, ColumnDef, HeaderContext } from "@tanstack/react-table"
 import { ClassValue } from "clsx"
 import {
@@ -29,7 +29,7 @@ import { EthernetIcon, GpuIcon, HourglassIcon, ThermometerIcon } from "../ui/ico
 import { useStore } from "@nanostores/react"
 import { $longestSystemNameLen, $userSettings } from "@/lib/stores"
 import { Trans, useLingui } from "@lingui/react/macro"
-import { useMemo, useRef, useState } from "react"
+import { useMemo, useRef, useState, useEffect } from "react"
 import { memo } from "react"
 import {
 	DropdownMenu,
@@ -289,6 +289,15 @@ export default function SystemsTableColumns(viewMode: "table" | "grid"): ColumnD
 			},
 		},
 		{
+			id: "systemd",
+			name: () => t`Services`,
+			size: 50,
+			Icon: ServerIcon,
+			hideSort: true,
+			header: sortableHeader,
+			cell: ({ row }) => <SystemdCell systemId={row.original.id} />,
+		},
+		{
 			id: "actions",
 			// @ts-ignore
 			name: () => t({ message: "Actions", comment: "Table column" }),
@@ -349,6 +358,41 @@ export function IndicatorDot({ system, className }: { system: SystemRecord; clas
 		/>
 	)
 }
+
+const SystemdCell = ({ systemId }: { systemId: string }) => {
+	const [stats, setStats] = useState<SystemStats | null>(null);
+
+	useEffect(() => {
+		const fetchStats = async () => {
+			try {
+				const record = await pb.collection("system_stats").getFirstListItem<SystemStatsRecord>(`system="${systemId}"`, {
+					sort: "-created",
+				});
+				setStats(record.stats);
+			} catch (error) {
+				// Handle case where no stats are found
+				setStats(null);
+			}
+		};
+
+		fetchStats();
+	}, [systemId]);
+
+	if (!stats || !stats.ss) {
+		return <span className="text-muted-foreground">-</span>;
+	}
+
+	const failed = stats.ss.filter(s => s.status === 'failed').length;
+	const total = stats.ss.length;
+
+	return (
+		<div className="tabular-nums">
+			<span className={failed > 0 ? "text-red-500" : ""}>{failed}</span>
+			<span>/</span>
+			<span>{total}</span>
+		</div>
+	);
+};
 
 export const ActionsButton = memo(({ system }: { system: SystemRecord }) => {
 	const [deleteOpen, setDeleteOpen] = useState(false)

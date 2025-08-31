@@ -78,6 +78,10 @@ msgstr "5分钟"
 msgid "Actions"
 msgstr "操作"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "active"
+msgstr ""
+
 #: src/components/alerts-history-columns.tsx
 #: src/components/routes/settings/alerts-history-data-table.tsx
 msgid "Active"
@@ -498,6 +502,10 @@ msgstr "导出您当前的系统配置。"
 msgid "Fahrenheit (°F)"
 msgstr "华氏度 (°F)"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "failed"
+msgstr ""
+
 #: src/lib/api.ts
 msgid "Failed to authenticate"
 msgstr "认证失败"
@@ -678,6 +686,10 @@ msgstr "公共接口的网络流量"
 #: src/components/routes/settings/general.tsx
 msgid "Network unit"
 msgstr "网络单位"
+
+#: src/components/SystemdServicesTable.tsx
+msgid "No failed services."
+msgstr ""
 
 #: src/components/command-palette.tsx
 msgid "No results found."
@@ -872,6 +884,14 @@ msgstr "查看<0>通知设置</0>以配置您接收警报的方式。"
 msgid "Sent"
 msgstr "发送"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "Service"
+msgstr ""
+
+#: src/components/systems-table/systems-table-columns.tsx
+msgid "Services"
+msgstr ""
+
 #: src/components/routes/settings/general.tsx
 msgid "Set percentage thresholds for meter colors."
 msgstr "设置仪表颜色的百分比阈值。"
@@ -891,6 +911,14 @@ msgstr "设置"
 msgid "Settings saved"
 msgstr "设置已保存"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "Show all"
+msgstr ""
+
+#: src/components/SystemdServicesTable.tsx
+msgid "Show less"
+msgstr ""
+
 #: src/components/login/auth-form.tsx
 msgid "Sign in"
 msgstr "登录"
@@ -908,6 +936,7 @@ msgstr "排序依据"
 msgid "State"
 msgstr "状态"
 
+#: src/components/SystemdServicesTable.tsx
 #: src/components/systems-table/systems-table.tsx
 #: src/lib/alerts.ts
 msgid "Status"
@@ -931,6 +960,11 @@ msgstr "系统"
 #: src/components/routes/system.tsx
 msgid "System load averages over time"
 msgstr "系统负载平均值随时间变化"
+
+#: src/components/routes/system.tsx
+#: src/components/SystemdServicesTable.tsx
+msgid "Systemd Services"
+msgstr ""
 
 #: src/components/navbar.tsx
 msgid "Systems"

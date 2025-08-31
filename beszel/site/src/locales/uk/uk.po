@@ -78,6 +78,10 @@ msgstr "5 хв"
 msgid "Actions"
 msgstr "Дії"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "active"
+msgstr ""
+
 #: src/components/alerts-history-columns.tsx
 #: src/components/routes/settings/alerts-history-data-table.tsx
 msgid "Active"
@@ -498,6 +502,10 @@ msgstr "Експортуйте поточну конфігурацію сист�
 msgid "Fahrenheit (°F)"
 msgstr "Фаренгейт (°F)"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "failed"
+msgstr ""
+
 #: src/lib/api.ts
 msgid "Failed to authenticate"
 msgstr "Не вдалося автентифікувати"
@@ -678,6 +686,10 @@ msgstr "Мережевий трафік публічних інтерфейсі�
 #: src/components/routes/settings/general.tsx
 msgid "Network unit"
 msgstr "Одиниця виміру мережі"
+
+#: src/components/SystemdServicesTable.tsx
+msgid "No failed services."
+msgstr ""
 
 #: src/components/command-palette.tsx
 msgid "No results found."
@@ -872,6 +884,14 @@ msgstr "Перегляньте <0>налаштування сповіщень</0
 msgid "Sent"
 msgstr "Відправлено"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "Service"
+msgstr ""
+
+#: src/components/systems-table/systems-table-columns.tsx
+msgid "Services"
+msgstr ""
+
 #: src/components/routes/settings/general.tsx
 msgid "Set percentage thresholds for meter colors."
 msgstr "Встановіть відсоткові пороги для кольорів лічильників."
@@ -891,6 +911,14 @@ msgstr "Налаштування"
 msgid "Settings saved"
 msgstr "Налаштування збережено"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "Show all"
+msgstr ""
+
+#: src/components/SystemdServicesTable.tsx
+msgid "Show less"
+msgstr ""
+
 #: src/components/login/auth-form.tsx
 msgid "Sign in"
 msgstr "Увійти"
@@ -908,6 +936,7 @@ msgstr "Сортувати за"
 msgid "State"
 msgstr "Стан"
 
+#: src/components/SystemdServicesTable.tsx
 #: src/components/systems-table/systems-table.tsx
 #: src/lib/alerts.ts
 msgid "Status"
@@ -931,6 +960,11 @@ msgstr "Система"
 #: src/components/routes/system.tsx
 msgid "System load averages over time"
 msgstr "Середнє навантаження системи з часом"
+
+#: src/components/routes/system.tsx
+#: src/components/SystemdServicesTable.tsx
+msgid "Systemd Services"
+msgstr ""
 
 #: src/components/navbar.tsx
 msgid "Systems"

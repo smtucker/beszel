@@ -49,6 +49,7 @@ import SwapChart from "@/components/charts/swap-chart"
 import TemperatureChart from "@/components/charts/temperature-chart"
 import GpuPowerChart from "@/components/charts/gpu-power-chart"
 import LoadAverageChart from "@/components/charts/load-average-chart"
+import { SystemdServicesTable } from "../SystemdServicesTable"
 
 const cache = new Map<string, any>()
 
@@ -770,6 +771,18 @@ export default function SystemDetail({ name }: { name: string }) {
 							)
 						})}
 					</div>
+				)}
+
+				{/* systemd services table */}
+				{(systemStats.at(-1)?.stats.ss?.length ?? 0) > 0 && (
+					<Card className="col-span-full">
+						<CardHeader className="pb-5 pt-4 gap-1 relative max-sm:py-3 max-sm:px-4">
+							<CardTitle className="text-xl sm:text-2xl"><Trans>Systemd Services</Trans></CardTitle>
+						</CardHeader>
+						<div className="px-4 pb-4">
+							<SystemdServicesTable services={systemStats.at(-1)!.stats.ss!} />
+						</div>
+					</Card>
 				)}
 
 				{/* extra filesystem charts */}

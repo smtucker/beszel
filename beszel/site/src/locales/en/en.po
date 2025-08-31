@@ -73,6 +73,10 @@ msgstr "5 min"
 msgid "Actions"
 msgstr "Actions"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "active"
+msgstr "active"
+
 #: src/components/alerts-history-columns.tsx
 #: src/components/routes/settings/alerts-history-data-table.tsx
 msgid "Active"
@@ -493,6 +497,10 @@ msgstr "Export your current systems configuration."
 msgid "Fahrenheit (°F)"
 msgstr "Fahrenheit (°F)"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "failed"
+msgstr "failed"
+
 #: src/lib/api.ts
 msgid "Failed to authenticate"
 msgstr "Failed to authenticate"
@@ -673,6 +681,10 @@ msgstr "Network traffic of public interfaces"
 #: src/components/routes/settings/general.tsx
 msgid "Network unit"
 msgstr "Network unit"
+
+#: src/components/SystemdServicesTable.tsx
+msgid "No failed services."
+msgstr "No failed services."
 
 #: src/components/command-palette.tsx
 msgid "No results found."
@@ -867,6 +879,14 @@ msgstr "See <0>notification settings</0> to configure how you receive alerts."
 msgid "Sent"
 msgstr "Sent"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "Service"
+msgstr "Service"
+
+#: src/components/systems-table/systems-table-columns.tsx
+msgid "Services"
+msgstr "Services"
+
 #: src/components/routes/settings/general.tsx
 msgid "Set percentage thresholds for meter colors."
 msgstr "Set percentage thresholds for meter colors."
@@ -886,6 +906,14 @@ msgstr "Settings"
 msgid "Settings saved"
 msgstr "Settings saved"
 
+#: src/components/SystemdServicesTable.tsx
+msgid "Show all"
+msgstr "Show all"
+
+#: src/components/SystemdServicesTable.tsx
+msgid "Show less"
+msgstr "Show less"
+
 #: src/components/login/auth-form.tsx
 msgid "Sign in"
 msgstr "Sign in"
@@ -903,6 +931,7 @@ msgstr "Sort By"
 msgid "State"
 msgstr "State"
 
+#: src/components/SystemdServicesTable.tsx
 #: src/components/systems-table/systems-table.tsx
 #: src/lib/alerts.ts
 msgid "Status"
@@ -926,6 +955,11 @@ msgstr "System"
 #: src/components/routes/system.tsx
 msgid "System load averages over time"
 msgstr "System load averages over time"
+
+#: src/components/routes/system.tsx
+#: src/components/SystemdServicesTable.tsx
+msgid "Systemd Services"
+msgstr "Systemd Services"
 
 #: src/components/navbar.tsx
 msgid "Systems"

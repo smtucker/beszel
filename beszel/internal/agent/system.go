@@ -222,6 +222,9 @@ func (a *Agent) getSystemStats() system.Stats {
 		}
 	}
 
+	// systemd services
+	systemStats.SystemdServices = getSystemdServices()
+
 	// temperatures
 	// TODO: maybe refactor to methods on systemStats
 	a.updateTemperatures(&systemStats)
